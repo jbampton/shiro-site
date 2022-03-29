@@ -14,6 +14,7 @@
 <#if ((content.releases).versions)??>
   <#assign displayReleases=((content.releases).versions)![] />
   <#assign downloadUrl="https://www.apache.org/dyn/closer.lua/shiro/" />
+  <#assign downloadHashUrl="https://downloads.apache.org/shiro/" />
 <#else>
   <#-- if not releases are given using :jbake-release:, assume oldReleases (release-archive.html). -->
   <#assign displayReleases=versions.oldReleases />
@@ -47,9 +48,9 @@
 
   <code><a class="external-link" href="${downloadUrl}${release.version}/shiro-root-${release.version}-source-release.zip">shiro-root-${release.version}-source-release.zip</a></code>
     (<a class="external-link"
-        href="${downloadUrl}${release.version}/shiro-root-${release.version}-source-release.zip.asc">pgp</a>, <a
+        href="${downloadHashUrl}${release.version}/shiro-root-${release.version}-source-release.zip.asc">pgp</a>, <a
             class="external-link"
-            href="${downloadUrl}${release.version}/shiro-root-${release.version}-source-release.zip.sha512">sha512</a>)
+            href="${downloadHashUrl}${release.version}/shiro-root-${release.version}-source-release.zip.sha512">sha512</a>)
   </code>
 
   <p>Associated documentation can be found <a href="documentation.html" title="Documentation">here</a></p>
